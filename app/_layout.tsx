@@ -12,7 +12,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
-  }, []);
+  }, [fontsLoaded, error]);
 
   if (!fontsLoaded) return null;
   if (!fontsLoaded && !error) return null;
